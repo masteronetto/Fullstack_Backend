@@ -10,15 +10,15 @@
 2. **Configura la base de datos:**
    - Crea una base de datos MySQL (por ejemplo, `kebumydb`).
    - Edita `src/main/resources/application.properties` con tus credenciales de MySQL.
-3. **Instala dependencias:**
-   - Si usas Maven Wrapper:
-     ```bash
-     ./mvnw clean install
-     ```
-   - O con Maven global:
-     ```bash
-     mvn clean install
-     ```
+
+3. **Instala dependencias y reconstruye archivos generados:**
+  - Al descargar el proyecto desde GitHub, ejecuta uno de los siguientes comandos para reinstalar todas las dependencias y regenerar la carpeta `target/`:
+    ```bash
+    ./mvnw clean install
+    # o
+    mvn clean install
+    ```
+  - Esto descargará todas las dependencias necesarias y compilará el proyecto desde cero.
 
 ## Instrucciones de ejecución
 
@@ -31,6 +31,8 @@
   mvn spring-boot:run
   ```
 - El backend estará disponible en: `http://localhost:8080`
+
+> Nota: Si descargaste el proyecto desde GitHub y no ves la carpeta `target/`, solo ejecuta `./mvnw clean install` o `mvn clean install` para generarla automáticamente.
 
 ## Credenciales de prueba
 
